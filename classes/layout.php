@@ -30,6 +30,9 @@ class Layout
                 <li class="nav-item">
                     <a class="nav-link" href="/programs.php">Programmer</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/team.php">Team</a>
+                </li>
             </ul>
         </nav>
         <?php
@@ -40,7 +43,7 @@ class Layout
         ?>
             <footer class="mt-auto text-center text-muted">
                 <!-- Didn't know what to add in this footer so whatever -->
-                <p>© Foks Corp 2019 - Version: <?=Config::i()->getVer()?></p>
+                <p class="fixed-bottom">© Foks Corp 2019 - Version: <?=Config::i()->getVer()?></p>
             </footer>
             <script src="/vendor/jquery-3.4.1/jquery.min.js"></script>
             <script src="/vendor/popper-1.14.7/popper.min.js"></script>

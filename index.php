@@ -20,14 +20,8 @@ Layout::i()->nav();
 
 <div class="text-center">
     <h1 class="display-4">Velkommen til ZiipenFM</h1>
-    <button id="purchase" class="btn btn-primary">Send moneys</button>
-    <button id="notification" class="btn btn-warning">Send notification</button>
-    <a href="/player.php" class="btn btn-primary">View my player data</a>
-    <!-- Set tablet closeable checkbox -->
-    <div class="custom-control custom-checkbox mt-2">
-        <input type="checkbox" class="custom-control-input" id="tabletcloseable" checked>
-        <label class="custom-control-label" for="tabletcloseable">Allow tablet to be closed</label>
-    </div>
+
+
 </div>
 
 <?php

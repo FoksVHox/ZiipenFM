@@ -1,12 +1,12 @@
 FTP Detaljer
 Host: ftp.web1.lim1.straire.net:21
 Username: sxtftpu_devapp
-Password: 1c1e479895926463
+Password: 8204097540b8e063
 
 SQL Detaljer
 Host: sql.web1.lim1.straire.net:3306
 Database: sxtdb_devapp
 Username: sxtdbu_devapp
-Password: bbeca52308206f96
+Password: 7c664c0578db69c2
 
-https://i.imgur.com/yw1jMDA.png
+https://i.imgur.com/ZPkwDZI.png
