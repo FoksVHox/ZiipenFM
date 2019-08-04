@@ -16,6 +16,8 @@ Layout::i()->header();
 <?php
 // Echo our navbar
 Layout::i()->nav();
+
+//Programs::i()->newProgram('ZiipenFM', 'Proin id mauris scelerisque, interdum purus in, tempor mauris. Donec elit leo, sollicitudin non ipsum eu, mattis fermentum enim. Nam aliquet dui ac odio semper, at varius', 'Ziipen & Peanut', 48)
 ?>
 
 <div class="text-center">

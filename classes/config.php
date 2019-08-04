@@ -8,7 +8,7 @@ class Config
     /* MYSQL CONNECTION */
     private static $SQL = [
         'user' => 'sxtdbu_devapp',
-        'pass' => 'bbeca52308206f96',
+        'pass' => '7c664c0578db69c2',
         'default_database' => 'sxtdb_devapp',
     ];
 

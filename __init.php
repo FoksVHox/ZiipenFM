@@ -49,3 +49,14 @@ if (Config::i()->isDevelopment()) {
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 }
+
+SQL::i()->MakeTable('CREATE TABLE if not exists `Programs` (
+	`ID` INT NOT NULL AUTO_INCREMENT,
+	`Name` VARCHAR(50) NOT NULL,
+	`Host` TEXT NOT NULL,
+	`SmallDescription` VARCHAR(190) NOT NULL,
+	`Description` TEXT NOT NULL,
+	`Icon` INT,
+	`When` TEXT,
+	PRIMARY KEY (`ID`)
+);');

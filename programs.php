@@ -26,62 +26,38 @@ Layout::i()->nav();
     </div>
 
     <div class="row mt-5">
-        
-            <div class="card ml-auto mr-auto mb-4" style="width: 20rem;">
-                <img src="assets/img/img29.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">TechSex</h5>
-                    <label class="text-muted">Vært: Johnson</label>
-                    <br>
-                    <p class="card-text">Proin id mauris scelerisque, interdum purus in, tempor mauris. Donec elit leo, sollicitudin non ipsum eu, mattis fermentum enim. Nam aliquet dui ac odio semper, at varius.</p>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <a href="#" class="btn btn-block btn-primary">Se mere</a>
-                        </div>
-                        <div class="col-md-6">
-                            <a href="#" class="btn btn-block btn-success">Lyt live</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="card ml-auto mr-auto mb-4" style="width: 20rem;">
-                <img src="assets/img/img46.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Nyheder</h5> <span class="badge badge-success">LIVE</span>
-                    <label class="text-muted">Vært: Ziipen, Peanut</label>
-                    <br>
-                    <p class="card-text">Proin id mauris scelerisque, interdum purus in, tempor mauris. Donec elit leo, sollicitudin non ipsum eu, mattis fermentum enim. Nam aliquet dui ac odio semper, at varius.</p>
-                    <div class="row">
+            <?php
+                //print_r(Programs::i()->getPrograms());
+                $content = array();
+                $res = Programs::i()->getPrograms();
+                foreach($res as $k){ 
+                    
+                    $live = Programs::i()->isLive($k['ID'])
+                    ?>
+                    
 
-                        <div class="col-md-6">
-                            <a href="#" class="btn btn-block btn-primary">Se mere</a>
-                        </div>
-                        <div class="col-md-6">
-                            <a href="https://coolassradio.tk/radio/8010/320kbps.mp3?1564873672" target="_blank" class="btn btn-block btn-success">Lyt live</a>
+                    <div class="card ml-auto mr-auto mb-4" style="width: 20rem;">
+                        <img src="assets/img/img<?=$k['Icon']?>.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><?=$k['Name']?></h5>
+                            <label class="text-muted">Vært: <?=$k['Host']?></label>
+                            <br>
+                            <p class="card-text"><?=$k['SmallDescription']?></p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a href="program.php?pg=<?=bin2hex($k['ID'])?>" class="btn btn-block btn-primary">Se mere</a>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="#" class="btn btn-block btn-success">Lyt live</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
+            <?php
+                }
 
-            <div class="card ml-auto mr-auto mb-4" style="width: 20rem;">
-                <img src="assets/img/img21.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Franzens hjørne</h5>
-                    <label class="text-muted">Vært: Franzen, gæst</label>
-                    <br>
-                    <p class="card-text">Proin id mauris scelerisque, interdum purus in, tempor mauris. Donec elit leo, sollicitudin non ipsum eu, mattis fermentum enim. Nam aliquet dui ac odio semper, at varius.</p>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <a href="#" class="btn btn-block btn-primary">Se mere</a>
-                        </div>
-                        <div class="col-md-6">
-                            <a href="#" class="btn btn-block btn-success">Lyt live</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
+            ?>
+
        <!-- 
             <div class="card ml-auto mr-auto" style="width: 18rem;">
                 <img src="assets/img/img2.jpg" class="card-img-top" alt="...">

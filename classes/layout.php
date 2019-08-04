@@ -34,6 +34,21 @@ class Layout
                     <a class="nav-link" href="/team.php">Team</a>
                 </li>
             </ul>
+            <div class="nav-item dropdown">
+                <a class="dropdown-toggle mr-3" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color: white; text-decoration: none;"> Logget ind som: <?=User::i()->getName()?></a>
+                <div class="dropdown-menu">
+
+                    <!-- Profil -->
+                    <a class="dropdown-item" href="profile.php?id=<?=User::i()->getSteamID()?>">Min profil</a>
+
+                    <!-- Admin tjek -->
+                    
+                    <!--    <a class="dropdown-item" href="user.php"></i> Mine Reklamer</a>-->
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="devreq.php">Udviker</a>
+                    <a class="dropdown-item"href="dashboard.php">Dashboard</a>
+                </div>
+            </div>
         </nav>
         <?php
     }

@@ -34,6 +34,12 @@ class SQL
         return $DB;
     }
 
+    public function MakeTable($sql)
+    {
+        $stmt = $this->conn(NULL)->prepare($sql);
+        return $stmt->execute();
+    }
+
     // Get the columns of any table. Just a useful function you might need idk
     public function getColumns($table, $connName = null){
 		$stmt = $this->conn($connName)->prepare("DESCRIBE ".$table);
